@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Home Portfolio</title>
+		<style>
+			*{
+				font-family:Verdana, Geneva, Tahoma, sans-serif;
+			}
+			h1{
+				font-size:30px;
+			}
+			.container{
+				display: flex;
+  				flex-wrap: wrap;
+			}
+			.left{
+				text-align: center;
+				width:35%;
+				float:left;
+				background-color: #eee;
+				min-height: 500px;
+			}
+			.right{
+				width:65%;
+				float:left;
+				background-color: #ddd;
+				min-height: 500px;
+			}
+			.up{
+				padding:20px;
+			}
+			.down{
+				padding:10px;
+			}
+		</style>	
+	</head>
+	<body>
+		<div class='container'>
+			<aside class='left'>
+				<section class='up'>
+					<img th:src="@{/img/{img} (img=${porta.image_url})}" width="200" heigth="200"/>
+				</section>
+				<section style='border-radius:5px;border:3px solid #BDD9F2;background-color: #253759;'>
+					<p style='padding-left:20px;text-align: justify;font-size:18px;color:#fff;font-weight: bold;'>Bolivar's timeline</p>	
+				</section>
+				<section class='down'>
+					<table width='100%' cellpadding='2' style='background-color: white;'>
+						<tr th:each="tweet: ${tweets}">
+							<td width='10%'><img th:src="@{/img/avatar-be.png}"  width="50" heigth="50"/></td>
+							<td style='text-align:left;border-bottom: 1px solid #ccc;;'>
+								<span th:text="${tweet.user.name} + ': '" style='text-align:left;font-weight:bold;font-size:14px;'></span><br/>
+								<span th:text="${tweet.text}" style='font-size:13px;'></span>
+							</td>
+						</tr>
+					</table>
+				</section>
+			</aside>
+			<aside class='right'>
+				<section class='up'>
+					<h1 th:text="${porta.names} + ' ' + ${porta.last_names}" style='color:#486966;'></h1>				
+				</section>
+				<section style='border-radius:5px;border:3px solid #BDD9F2;background-color: #253759;'>
+					<p style='padding-left:20px;text-align: justify;font-size:18px;color:#fff;font-weight: bold;'>My Work Experience</p>	
+				</section>
+				<section class='down'>
+					<p th:text="${porta.experience_summary}" style='text-align: justify;font-size:18px;color:#212121;'></p>	
+				</section>
+			</aside>
+		</div>
+		<div style='clear:both;'></div>
+	</body>
+</html>
