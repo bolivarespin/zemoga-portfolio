@@ -1,7 +1,7 @@
 # Zemoga Portfolio
 This project is a porfolio as a Java web application which has the next requirements:
 
-API REST with two endpoints:
+API REST with three endpoints:
 1. Get the data from the database for portfolio information and show it.1.  
 2. Update the portfolio information.
 3. Consume the Twitter API to get the timeline for the user and show them.
