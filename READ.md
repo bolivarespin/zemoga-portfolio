@@ -1,4 +1,4 @@
-#Zemoga Portfolio
+# Zemoga Portfolio
 This project is a porfolio as a Java web application which has the next requirements:
 
 API REST with two endpoints:
@@ -8,20 +8,20 @@ API REST with two endpoints:
 
 
 **Technologies:**
-. Java 11
-. Maven
-. Spring boot 2.6.2
-. MySQL
-. Thymeleaf
-. Twitter4j
-. Junit
-. Mockito
-. Swagger
+1. Java 11
+2. Maven
+3. Spring boot 2.6.2
+4. MySQL
+5. Thymeleaf over HTML and CSS
+6. Twitter4j
+7. Junit
+8. Mockito
+9. Swagger
 
 **Swagger Api documentation:**
-Once the application is installed, the url to see the swagger documentation is:
+1. Once the application is installed, the url to see the swagger documentation is:
 [URL_Server]:8090/swagger-ui.html
 
 **Time used:**
-. Hours for development		: 6
-. Hours for complete the test	: 6
+1. Hours for development		: 6
+2. Hours for complete the test	: 6
